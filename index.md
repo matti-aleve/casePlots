@@ -2,6 +2,8 @@ The following charts show case counts by case reported date per 100k by PHU for 
 
 Note: open this page in private browsing window to get most up-to-date charts below. (or click here)
 
+[By Age](/byAge.md)
+
 Data from:
 
 * [https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario](https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario) 
