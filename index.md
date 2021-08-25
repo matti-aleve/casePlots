@@ -4,10 +4,13 @@ Note: open this page in private browsing window to get most up-to-date charts be
 
 Data from:
 
-[https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario](https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario) 
+* [https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario](https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario) 
 
-[https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario ](https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario) 
+* [https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario ](https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario) 
 
 
 
-![Image1](/Ontario_Toronto.png)
+![Image1](/PHU/Ontario_Chart1.png)
+![Image2](/PHU/Ontario_Chart2.png)
+![Image3](/PHU/Ontario_Chart3.png)
+
