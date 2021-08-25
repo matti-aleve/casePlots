@@ -1,6 +1,5 @@
 The following charts show case counts by case reported date per 100k by PHU for Ontario.  The grey dots are the actual case counts, the blue line is the trailing 7 day average.
 
-Note: open this page in private browsing window to get most up-to-date charts below. (or click here)
 
 [By Age](/byAge.md)
 
