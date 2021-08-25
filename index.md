@@ -1,42 +1,13 @@
-## Welcome to GitHub Pages
+The following charts show case counts by case reported date per 100k by PHU for Ontario.  The grey dots are the actual case counts, the blue line is the trailing 7 day average.
 
-You can use the [editor on GitHub](https://github.com/matti-aleve/casePlots/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Note: open this page in private browsing window to get most up-to-date charts below. (or click here)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Data from:
 
-Test Test Test
+[https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario](https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario) 
 
-### Markdown
+[https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario ](https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario) 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/matti-aleve/casePlots/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
 
 ![Image1](/Ontario_Toronto.png)
