@@ -2,6 +2,8 @@ The following charts show case counts by case reported date per 100k by PHU for 
 
 
 [By Age](/byAge.md)
+[Schools](/schools.md)
+[Licensed Child Care](/LCC.md)
 
 Data from:
 
