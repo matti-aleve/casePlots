@@ -1,5 +1,9 @@
-The following charts show case counts by case reported date per 100k by PHU for Ontario.  The grey dots are the actual case counts, the blue line is the trailing 7 day average.
+Charts on this site are generated automatically from various Covid data sets from the Ontario Data Catalog.
+Links to the datasets are provided below.
 
+Here you will find plots below for all Ontario Public Health units normalized to daily cases
+per 100k.  On linked pages below you will find case counts by age for some of the larger health units
+along with charts for licensed child care and schol settings. 
 
 * [By Age](/byAge.md)
 * [Schools](/schools.md)
@@ -11,7 +15,13 @@ Data from:
 
 * [https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario ](https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario) 
 
+* [https://data.ontario.ca/dataset/summary-of-cases-in-schools](https://data.ontario.ca/dataset/summary-of-cases-in-schools)
 
+* [https://data.ontario.ca/dataset/summary-of-cases-in-licensed-child-care-settings](https://data.ontario.ca/dataset/summary-of-cases-in-licensed-child-care-settings)
+
+
+The following charts show case counts by case reported date per 100k by PHU for Ontario.  
+The grey dots are the actual case counts, the blue line is the trailing 7 day average.
 
 ![Image1](/PHU/Ontario_Chart1.png)
 ![Image2](/PHU/Ontario_Chart2.png)
