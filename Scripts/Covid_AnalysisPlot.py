@@ -165,7 +165,24 @@ if "Matti-MacBook-Pro.local" not in hostInfo:
 	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/8b6d22e2-7065-4b0f-966f-02640be366f2/download/schoolsactivecovid.csv > ~/Desktop/Covid/schoolsactivecovid_"+strToday+".csv")
 	os.system("curl https://data.ontario.ca/dataset/cbb4d08c-4e56-4b07-9db6-48335241b88a/resource/ce9f043d-f0d4-40f0-9b96-4c8a83ded3f6/download/response_framework.csv > ~/Desktop/Covid/response_framework_"+strToday+".csv")
 	os.system("curl https://data.ontario.ca/dataset/a2dfa674-a173-45b3-9964-1e3d2130b40f/resource/07bc0e21-26b5-4152-b609-c1958cb7b227/download/testing_metrics_by_phu.csv > ~/Desktop/Covid/testing_metrics_by_phu_"+strToday+".csv")
-
+	#cases and rates by vax status
+	os.system("curl https://data.ontario.ca/dataset/752ce2b7-c15a-4965-a3dc-397bf405e7cc/resource/eed63cf2-83dd-4598-b337-b288c0a89a16/download/cases_by_vac_status.csv > ~/Desktop/Covid/cases_by_vac_status_"+strToday+".csv")
+	#hosp by vax status
+	os.system("curl https://data.ontario.ca/dataset/752ce2b7-c15a-4965-a3dc-397bf405e7cc/resource/274b819c-5d69-4539-a4db-f2950794138c/download/vac_status_hosp_icu.csv > ~/Desktop/Covid/vac_status_hosp_icu_"+strToday+".csv")
+	#vax by phu
+	os.system("curl https://data.ontario.ca/dataset/752ce2b7-c15a-4965-a3dc-397bf405e7cc/resource/2a362139-b782-43b1-b3cb-078a2ef19524/download/vaccines_by_age_phu.csv > ~/Desktop/Covid/vaccines_by_age_phu_"+strToday+".csv")
+	#vax data
+	os.system("curl https://data.ontario.ca/dataset/752ce2b7-c15a-4965-a3dc-397bf405e7cc/resource/8a89caa9-511c-4568-af89-7f2174b4378c/download/vaccine_doses.csv > ~/Desktop/Covid/vaccine_doses_"+strToday+".csv")
+	#vax by age
+	os.system("curl https://data.ontario.ca/dataset/752ce2b7-c15a-4965-a3dc-397bf405e7cc/resource/775ca815-5028-4e9b-9dd4-6975ff1be021/download/vaccines_by_age.csv > ~/Desktop/Covid/vaccines_by_age_"+strToday+".csv")
+	#case status by PHU
+	os.system("curl https://data.ontario.ca/dataset/1115d5fe-dd84-4c69-b5ed-05bf0c0a0ff9/resource/d1bfe1ad-6575-4352-8302-09ca81f7ddfc/download/cases_by_status_and_phu.csv > ~/Desktop/Covid/cases_by_status_and_phu_"+strToday+".csv")
+	#effective Re 
+	os.system("curl https://data.ontario.ca/dataset/8da73272-8078-4cbd-ae35-1b5c60c57796/resource/1ffdf824-2712-4f64-b7fc-f8b2509f9204/download/re_estimates_on.csv > ~/Desktop/Covid/re_estimates_on_"+strToday+".csv")
+	#ongoing outbreaks
+	os.system("curl https://data.ontario.ca/dataset/5472ffc1-88e2-48ca-bc9f-4aa249c1298d/resource/66d15cce-bfee-4f91-9e6e-0ea79ec52b3d/download/ongoing_outbreaks.csv > ~/Desktop/Covid/ongoing_outbreaks_"+strToday+".csv")
+	#outbreaks by PHU
+	os.system("curl https://data.ontario.ca/dataset/5472ffc1-88e2-48ca-bc9f-4aa249c1298d/resource/36048cc1-3c47-48ff-a49f-8c7840e32cc2/download/ongoing_outbreaks_phu.csv > ~/Desktop/Covid/ongoing_outbreaks_phu_"+strToday+".csv")
 
 fd=open(filename,'r')
 today=fd.readlines() # Read entire contents of file
