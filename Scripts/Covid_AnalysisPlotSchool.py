@@ -39,6 +39,7 @@ filename = ""
 strToday = datetime.today().strftime('%Y-%m-%d')
 
 filename = "/Users/matti/Desktop/Covid/schoolcovidsummary_"+strToday+".csv"
+filename21 = "/Users/matti/Desktop/Covid/schoolcovidsummary2021_2022_"+strToday+".csv"
 
 
 hostInfo = os.uname()
@@ -46,9 +47,10 @@ hostInfo = os.uname()
 if "Matti-MacBook-Pro.local" not in hostInfo:
 	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/7fbdbb48-d074-45d9-93cb-f7de58950418/download/schoolcovidsummary.csv > ~/Desktop/Covid/schoolcovidsummary_"+strToday+".csv")
 	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/8b6d22e2-7065-4b0f-966f-02640be366f2/download/schoolsactivecovid.csv > ~/Desktop/Covid/schoolsactivecovid_"+strToday+".csv")
-	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/7e644a48-6040-4ee0-9216-1f88121b21ba/download/schoolcovidsummary2021_2022.csv > ~/Desktop/Covid/schoolcovidsummary2021_2022_"+strToday+".csv"")
+	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/7e644a48-6040-4ee0-9216-1f88121b21ba/download/schoolcovidsummary2021_2022.csv > ~/Desktop/Covid/schoolcovidsummary2021_2022_"+strToday+".csv")
+	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/dc5c8788-792f-4f91-a400-036cdf28cfe8/download/schoolrecentcovid2021_2022.csv > ~/Desktop/Covid/schoolsactivecovid2021_2022_"+strToday+".csv")
 
-fd=open(filename,'r')
+fd=open(filename21,'r')
 today=fd.readlines() # Read entire contents of file
 fd.close()
 
@@ -75,8 +77,9 @@ cumulativeUnspecifiedCases = {}
 
 
 
-print ("%s" % filename)
-with open(filename, newline='') as csvfile:
+
+print ("%s" % filename21)
+with open(filename21, newline='') as csvfile:
 	activityReader = csv.reader(csvfile, delimiter=',', quotechar='\"')
 
 	for line in activityReader:
@@ -101,6 +104,7 @@ for i in sorted(schoolsWithCases):
 	if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
 		chartX.append(i[-5:])
 		chartPoint.append(schoolsWithCases[i])
+		print(i)
 		#chartX.append(i)
 		
 
@@ -115,18 +119,18 @@ mov_avg_list = mov_avg.tolist()
 daysToPlot = -150
 
 
-plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.')
-#plt.plot(chartX[daysToPlot:],mov_avg_list[daysToPlot:])
+#plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.')
+plt.plot(chartX,chartPoint,'r.')
 plt.title('Schools With Cases -' + strToday)
 
 plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=60)
-plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=4))
+plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=1))
 plt.gca().xaxis.set_minor_locator(mdates.DayLocator())
 plt.xlabel('Date')
 plt.ylabel('Schools')
 
 
-plt.savefig('/Users/matti/GitHub/casePlots/Schools/school1.png')
+plt.savefig('/Users/matti/GitHub/casePlots/Schools/school_21_1.png')
 plt.clf()
 
 
@@ -152,19 +156,21 @@ mov_avg_list = mov_avg.tolist()
 daysToPlot = -150
 
 
-plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.')
-plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:])
+#plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.')
+#plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:])
+plt.plot(chartX,chartPoint,'r.')
+plt.plot(chartX,chartPoint)
 #plt.plot(chartX[daysToPlot:],mov_avg_list[daysToPlot:])
 plt.title('Schools Closed -' + strToday)
 
 plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=60)
-plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=4))
+plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=1))
 plt.gca().xaxis.set_minor_locator(mdates.DayLocator())
 plt.xlabel('Date')
 plt.ylabel('Schools')
 
 
-plt.savefig('/Users/matti/GitHub/casePlots/Schools/school2.png')
+plt.savefig('/Users/matti/GitHub/casePlots/Schools/school_21_2.png')
 plt.clf()
 
 ## Cumulative Cases
@@ -191,7 +197,7 @@ mov_avg = windows.mean()
 
 mov_avg_list = mov_avg.tolist()
 
-daysToPlot = -150
+daysToPlot = -1
 
 
 plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.',label='Students')
@@ -200,7 +206,7 @@ plt.plot(chartX[daysToPlot:],chartPoint3[daysToPlot:],'m.',label='Unspecified')
 plt.title('Cumulative Student/Staff Cases -' + strToday)
 
 plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=60)
-plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=4))
+plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=1))
 plt.gca().xaxis.set_minor_locator(mdates.DayLocator())
 
 plt.xlabel('Date')
@@ -208,5 +214,5 @@ plt.ylabel('Cases')
 plt.legend(loc='best')
 
 
-plt.savefig('/Users/matti/GitHub/casePlots/Schools/school3.png')
+plt.savefig('/Users/matti/GitHub/casePlots/Schools/school_21_3.png')
 plt.clf()
