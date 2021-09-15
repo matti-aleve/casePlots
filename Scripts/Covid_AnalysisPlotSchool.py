@@ -46,7 +46,7 @@ hostInfo = os.uname()
 if "Matti-MacBook-Pro.local" not in hostInfo:
 	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/7fbdbb48-d074-45d9-93cb-f7de58950418/download/schoolcovidsummary.csv > ~/Desktop/Covid/schoolcovidsummary_"+strToday+".csv")
 	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/8b6d22e2-7065-4b0f-966f-02640be366f2/download/schoolsactivecovid.csv > ~/Desktop/Covid/schoolsactivecovid_"+strToday+".csv")
-
+	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/7e644a48-6040-4ee0-9216-1f88121b21ba/download/schoolcovidsummary2021_2022.csv > ~/Desktop/Covid/schoolcovidsummary2021_2022_"+strToday+".csv"")
 
 fd=open(filename,'r')
 today=fd.readlines() # Read entire contents of file
