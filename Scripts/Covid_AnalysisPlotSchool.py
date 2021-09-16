@@ -197,7 +197,7 @@ mov_avg = windows.mean()
 
 mov_avg_list = mov_avg.tolist()
 
-daysToPlot = -1
+daysToPlot = -100
 
 
 plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.',label='Students')
