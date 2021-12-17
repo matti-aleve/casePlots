@@ -279,7 +279,7 @@ PHU_Scale = {"Peel Public Health":1,"Toronto Public Health":1,
 "Timiskaming Health Unit":1.5,"Haliburton, Kawartha, Pine Ridge District Health Unit":1,
 "Leeds, Grenville and Lanark District Health Unit":1,"Grey Bruce Health Unit":1,
 "Renfrew County and District Health Unit":1,"Hastings and Prince Edward Counties Health Unit":1,
-"Thunder Bay District Health Unit":1,"Kingston, Frontenac and Lennox & Addington Public Health":1.5,
+"Thunder Bay District Health Unit":1,"Kingston, Frontenac and Lennox & Addington Public Health":2.5,
 "Northwestern Health Unit":1,"North Bay Parry Sound District Health Unit":1,
 "Algoma Public Health Unit":1.5,"Sudbury & District Health Unit":1.5,"Porcupine Health Unit":1}
 
