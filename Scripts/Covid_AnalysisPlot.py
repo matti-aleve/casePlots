@@ -414,7 +414,7 @@ print (chartX[-14:])
 spRow = 3
 spCol = 5
 yLimMin = 0
-yLimMax = 25
+yLimMax = 35
 ytickSize = 6
 yTickColor = 'black'
 
