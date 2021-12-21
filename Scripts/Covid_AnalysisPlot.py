@@ -276,12 +276,12 @@ PHU_Scale = {"Peel Public Health":1,"Toronto Public Health":1,
 "Middlesex-London Health Unit":1,"Wellington-Dufferin-Guelph Public Health":1,
 "Eastern Ontario Health Unit":1,"Haldimand-Norfolk Health Unit":1,
 "Simcoe Muskoka District Health Unit":1,"Peterborough Public Health":1,
-"Timiskaming Health Unit":1.5,"Haliburton, Kawartha, Pine Ridge District Health Unit":1,
+"Timiskaming Health Unit":1,"Haliburton, Kawartha, Pine Ridge District Health Unit":1,
 "Leeds, Grenville and Lanark District Health Unit":1,"Grey Bruce Health Unit":1,
 "Renfrew County and District Health Unit":1,"Hastings and Prince Edward Counties Health Unit":1,
 "Thunder Bay District Health Unit":1,"Kingston, Frontenac and Lennox & Addington Public Health":2.5,
 "Northwestern Health Unit":1,"North Bay Parry Sound District Health Unit":1,
-"Algoma Public Health Unit":1.5,"Sudbury & District Health Unit":1,"Porcupine Health Unit":1}
+"Algoma Public Health Unit":1,"Sudbury & District Health Unit":1,"Porcupine Health Unit":1}
 
 
 PHU_PositionC1 = {"Peel Public Health":1,"Toronto Public Health":2,
@@ -414,7 +414,7 @@ print (chartX[-14:])
 spRow = 3
 spCol = 5
 yLimMin = 0
-yLimMax = 35
+yLimMax = 45
 ytickSize = 6
 yTickColor = 'black'
 
