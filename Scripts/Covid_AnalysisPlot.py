@@ -89,9 +89,9 @@ def chartingDataMax (HealthUnit,refDateStr,provincialCount,regionCountMain,theCh
 	maxCount = 0.0
 	for i in sorted(provincialCount):
 		if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
-			dailyCount = float(DayCountPHU(regionCountMain,healthUnit , i)/(PHU_Pop[healthUnit]/100000)))
+			dailyCount = float(DayCountPHU(regionCountMain,healthUnit , i)/(PHU_Pop[healthUnit]/100000))
 			if dailyCount > maxCount :
-				maxCount = DailyCount
+				maxCount = dailyCount
 	return theChart
 
 
@@ -425,7 +425,7 @@ print (chartX[-14:])
 spRow = 3
 spCol = 5
 yLimMin = 0
-yLimMax = 80
+yLimMax = 50
 ytickSize = 6
 yTickColor = 'black'
 
@@ -438,12 +438,18 @@ xtickInterval = 7
 rollingAvg = 7
 
 
+for hu in PHU_PositionC1:
+
+	healthUnit = hu
+
+	maxValue = chartingDataMax(healthUnit,refDateStr,provincialCount,regionCountMain,theChart)
+	if maxValue > yLimMax:
+		yLimMax = maxValue
 
 
 for hu in PHU_PositionC1:
 
 	healthUnit = hu
-
 
 	plotChart = chartingData(healthUnit,refDateStr,provincialCount,regionCountMain,theChart)
 	plotPos = PHU_PositionC1[hu]
