@@ -85,6 +85,17 @@ def chartingData (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart
 			theChart.append(float(DayCountPHU(regionCountMain,healthUnit , i)/(PHU_Pop[healthUnit]/100000)))
 	return theChart
 
+def chartingDataMax (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart):
+	maxCount = 0.0
+	for i in sorted(provincialCount):
+		if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
+			dailyCount = float(DayCountPHU(regionCountMain,healthUnit , i)/(PHU_Pop[healthUnit]/100000)))
+			if dailyCount > maxCount :
+				maxCount = DailyCount
+	return theChart
+
+
+
 def chartingDataAge (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart,Age):
 
 	for i in sorted(provincialCount):
