@@ -92,7 +92,7 @@ def chartingDataMax (HealthUnit,refDateStr,provincialCount,regionCountMain,theCh
 			dailyCount = float(DayCountPHU(regionCountMain,healthUnit , i)/(PHU_Pop[healthUnit]/100000))
 			if dailyCount > maxCount :
 				maxCount = dailyCount
-	return theChart
+	return maxCount
 
 
 
@@ -446,6 +446,8 @@ for hu in PHU_PositionC1:
 	if maxValue > yLimMax:
 		yLimMax = maxValue
 
+outString = "yLimMax = " + str(yLimMax)
+print (outString)
 
 for hu in PHU_PositionC1:
 
@@ -483,15 +485,17 @@ for hu in PHU_PositionC2:
 
 	healthUnit = hu
 
+	maxValue = chartingDataMax(healthUnit,refDateStr,provincialCount,regionCountMain,theChart)
+
 
 	plotChart = chartingData(healthUnit,refDateStr,provincialCount,regionCountMain,theChart)
 	plotPos = PHU_PositionC2[hu]
 	plotTitle = PHU_Short_Name[hu]
 
-	if PHU_Scale[hu] > 1:
-		mySubPlot (plotChart,plotPos,plotTitle,yLimMax*PHU_Scale[hu],'red')
+	if maxValue > yLimMax:
+		mySubPlot (plotChart,plotPos,plotTitle,maxValue,'red')
 	else:
-		mySubPlot (plotChart,plotPos,plotTitle,yLimMax*PHU_Scale[hu],yTickColor)
+		mySubPlot (plotChart,plotPos,plotTitle,yLimMax,yTickColor)
 
 
 
@@ -515,15 +519,17 @@ for hu in PHU_PositionC3:
 
 	healthUnit = hu
 
+	maxValue = chartingDataMax(healthUnit,refDateStr,provincialCount,regionCountMain,theChart)
+
 
 	plotChart = chartingData(healthUnit,refDateStr,provincialCount,regionCountMain,theChart)
 	plotPos = PHU_PositionC3[hu]
 	plotTitle = PHU_Short_Name[hu]
 
-	if PHU_Scale[hu] > 1:
-		mySubPlot (plotChart,plotPos,plotTitle,yLimMax*PHU_Scale[hu],'red')
+	if maxValue > yLimMax:
+		mySubPlot (plotChart,plotPos,plotTitle,maxValue,'red')
 	else:
-		mySubPlot (plotChart,plotPos,plotTitle,yLimMax*PHU_Scale[hu],yTickColor)
+		mySubPlot (plotChart,plotPos,plotTitle,yLimMax,yTickColor)
 
 
 plt.suptitle('Daily Cases Per 100k by PHU By Case Reported Date -' + strToday)
