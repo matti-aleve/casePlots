@@ -438,8 +438,12 @@ markerColor = '#DEDEDE'
 xtickInterval = 7
 rollingAvg = 7
 
-print(provincialCount[-1])
 
+for i in sorted(provincialCount):
+	lastdate = i
+
+print(lastdate)	
+	
 for hu in PHU_PositionC1:
 
 	healthUnit = hu
@@ -467,7 +471,7 @@ for hu in PHU_PositionC1:
 
 
 
-plt.suptitle('Daily Cases Per 100k by PHU By Case Reported Date -' + strToday)
+plt.suptitle('Daily Cases Per 100k by PHU By Case Reported Date -' + lastdate)
 plt.subplots_adjust(left=0.125, bottom=0.1, right=0.9, top=0.8, wspace=0.4, hspace=0.8)
 
 dailyChartFile = '/Users/matti/Desktop/Covid/Ontario_Chart-'+strToday+'.png'
@@ -501,7 +505,7 @@ for hu in PHU_PositionC2:
 
 
 
-plt.suptitle('Daily Cases Per 100k by PHU By Case Reported Date -' + strToday)
+plt.suptitle('Daily Cases Per 100k by PHU By Case Reported Date -' + lastdate)
 plt.subplots_adjust(left=0.125, bottom=0.1, right=0.9, top=0.8, wspace=0.4, hspace=0.8)
 
 dailyChartFile = '/Users/matti/Desktop/Covid/Ontario_Chart2-'+strToday+'.png'
@@ -534,7 +538,7 @@ for hu in PHU_PositionC3:
 		mySubPlot (plotChart,plotPos,plotTitle,yLimMax,yTickColor)
 
 
-plt.suptitle('Daily Cases Per 100k by PHU By Case Reported Date -' + strToday)
+plt.suptitle('Daily Cases Per 100k by PHU By Case Reported Date -' + lastdate)
 plt.subplots_adjust(left=0.125, bottom=0.1, right=0.9, top=0.8, wspace=0.4, hspace=0.8)
 
 dailyChartFile = '/Users/matti/Desktop/Covid/Ontario_Chart3-'+strToday+'.png'
