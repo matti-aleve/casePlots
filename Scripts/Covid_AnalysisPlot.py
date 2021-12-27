@@ -96,6 +96,7 @@ def chartingDataMax (HealthUnit,refDateStr,provincialCount,regionCountMain,theCh
 
 
 
+
 def chartingDataAge (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart,Age):
 
 	for i in sorted(provincialCount):
@@ -437,6 +438,7 @@ markerColor = '#DEDEDE'
 xtickInterval = 7
 rollingAvg = 7
 
+print(provincialCount[-1])
 
 for hu in PHU_PositionC1:
 
