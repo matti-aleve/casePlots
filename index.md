@@ -23,9 +23,8 @@ Data from:
 The following charts show case counts by case reported date per 100k by PHU for Ontario.  
 The grey dots are the actual case counts, the blue line is the trailing 7 day average.
 
-Note:  There are reports coming out starting ~ Dec 20th that PCR testing is hard to book or completely unavailable 
-in certain health units.    It is very likely that these case counts are being undercounted, which will
-be visible in %positivity rising, which it is.
+Note:  It appears that Ontario's testing capability is no longer able to keep up.  It's better to look
+at the percentage of tests positive in the previous day.
 
 ![Image0](/pos.png)
 
