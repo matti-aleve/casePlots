@@ -714,3 +714,75 @@ if len(filename2)>1:
 	print ("Positivity: %f pct" % positivity)
 	print ("Hospitalized: %i" % hospitalized)
 	print ("In ICU: %i" % inICU)
+	
+strToday = datetime.today().strftime('%Y-%m-%d')
+
+filename = "/Users/matti/Desktop/Covid/covidtesting_"+strToday+".csv"
+
+
+
+reported_date = 0
+pctPos = 10
+
+
+	
+count = 0
+fullline = ""
+PctPosLastDay = {}
+
+
+
+
+print ("%s" % filename)
+with open(filename, newline='') as csvfile:
+	activityReader = csv.reader(csvfile, delimiter=',', quotechar='\"')
+
+	for line in activityReader:
+
+		if (count == 0):
+			count = count + 1
+		else:
+			print(line[pctPos])
+			try:
+				PctPosLastDay[line[reported_date]] = float(line[pctPos])
+			except:
+				PctPosLastDay[line[reported_date]] = 0
+
+## PctPos
+
+chartPoint = []
+chartX = []
+for i in sorted(PctPosLastDay):
+	refDateStr = "2021-12-01"
+	if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
+		chartX.append(i[-5:])
+		chartPoint.append(PctPosLastDay[i])
+		print(i)
+		print(PctPosLastDay[i])
+		#chartX.append(i)
+		
+
+xdates = [dt.strptime(dstr,'%m-%d') for dstr in chartX]
+
+num_series = pd.Series(chartPoint)
+windows = num_series.rolling(7)
+mov_avg = windows.mean()
+
+mov_avg_list = mov_avg.tolist()
+
+daysToPlot = -15
+
+
+#plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.')
+plt.plot(chartX,chartPoint,'r.')
+plt.title('Percent Positivity -' + strToday)
+
+plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=60)
+plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=3))
+plt.gca().xaxis.set_minor_locator(mdates.DayLocator())
+plt.xlabel('Date')
+plt.ylabel('%')
+
+
+plt.savefig('/Users/matti/GitHub/casePlots/pos.png')
+plt.clf()

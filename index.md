@@ -27,6 +27,8 @@ Note:  There are reports coming out starting ~ Dec 20th that PCR testing is hard
 in certain health units.    It is very likely that these case counts are being undercounted, which will
 be visible in %positivity rising, which it is.
 
+![Image0](/pos.png)
+
 ![Image1](/PHU/Ontario_Chart1.png)
 ![Image2](/PHU/Ontario_Chart2.png)
 ![Image3](/PHU/Ontario_Chart3.png)
