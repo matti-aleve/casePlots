@@ -23,8 +23,7 @@ Data from:
 The following charts show case counts by case reported date per 100k by PHU for Ontario.  
 The grey dots are the actual case counts, the blue line is the trailing 7 day average.
 
-Note:  It appears that Ontario's testing capability is no longer able to keep up.  It's better to look
-at the percentage of tests positive in the previous day.
+**Note:  As of early January 2022, Ontario's testing capability is basically broken.  Testing is basically unaavilable except for small specific groups.  Charts below are basically useless as they are severe undercounts**
 
 ![Image0](/pos.png)
 
