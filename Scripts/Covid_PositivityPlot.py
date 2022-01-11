@@ -79,7 +79,7 @@ with open(filename, newline='') as csvfile:
 
 chartPoint = []
 for i in sorted(PctPosLastDay):
-	refDateStr = "2021-12-01"
+	refDateStr = "2021-09-01"
 	if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
 		chartX.append(i[-5:])
 		chartPoint.append(PctPosLastDay[i])
@@ -104,7 +104,7 @@ plt.plot(chartX,chartPoint,'r.')
 plt.title('Percent Positivity -' + strToday)
 
 plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=60)
-plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=3))
+plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=7))
 plt.gca().xaxis.set_minor_locator(mdates.DayLocator())
 plt.xlabel('Date')
 plt.ylabel('%')
@@ -118,7 +118,7 @@ plt.clf()
 chartPoint = []
 chartX = []
 for i in sorted(TestsLastDay):
-	refDateStr = "2021-12-01"
+	refDateStr = "2021-09-01"
 	if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
 		chartX.append(i[-5:])
 		chartPoint.append(TestsLastDay[i])
@@ -140,13 +140,14 @@ daysToPlot = -15
 
 #plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.')
 plt.plot(chartX,chartPoint,'r.')
+plt.plot(chartX,mov_avg_list)
 plt.title('Tests Completed -' + strToday)
 
 plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=60)
-plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=3))
+plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=7))
 plt.gca().xaxis.set_minor_locator(mdates.DayLocator())
 plt.xlabel('Date')
-plt.ylabel('%')
+plt.ylabel('Tests')
 
 
 plt.savefig('/Users/matti/GitHub/casePlots/tests.png')
