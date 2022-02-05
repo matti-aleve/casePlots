@@ -27,6 +27,10 @@ The grey dots are the actual case counts, the blue line is the trailing 7 day av
 
 -->
 
+* [Science Table Dashboard](https://covid19-sciencetable.ca/ontario-dashboard/)
+* [OHA Data](https://www.oha.com/news/covid-19-hospital-capacity-update)
+* [Peel Epi Data](https://www.peelregion.ca/coronavirus/case-status/)
+
 **Note:  As of early January 2022, Ontario's testing capability is broken.  Testing is unavailable except for small specific groups.  Charts below of case counts have been removed for the time being**
 
 ![Image0](/pos.png)
