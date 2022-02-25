@@ -87,8 +87,10 @@ def chartingData (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart
 
 def chartingDataMax (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart):
 	maxCount = 0.0
+	maxDateStr = "2021-02-01"
+
 	for i in sorted(provincialCount):
-		if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
+		if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(maxDateStr,'%Y-%m-%d')):
 			dailyCount = float(DayCountPHU(regionCountMain,healthUnit , i)/(PHU_Pop[healthUnit]/100000))
 			if dailyCount > maxCount :
 				maxCount = dailyCount
@@ -291,7 +293,7 @@ PHU_Scale = {"Peel Public Health":1,"Toronto Public Health":1,
 "Timiskaming Health Unit":1,"Haliburton, Kawartha, Pine Ridge District Health Unit":1,
 "Leeds, Grenville and Lanark District Health Unit":1,"Grey Bruce Health Unit":1,
 "Renfrew County and District Health Unit":1,"Hastings and Prince Edward Counties Health Unit":1,
-"Thunder Bay District Health Unit":1,"Kingston, Frontenac and Lennox & Addington Public Health":1.5,
+"Thunder Bay District Health Unit":1,"Kingston, Frontenac and Lennox & Addington Public Health":1,
 "Northwestern Health Unit":1,"North Bay Parry Sound District Health Unit":1,
 "Algoma Public Health Unit":1,"Sudbury & District Health Unit":1,"Porcupine Health Unit":1}
 
@@ -431,6 +433,7 @@ ytickSize = 6
 yTickColor = 'black'
 
 plotDays = -42
+plotDays = -7
 xtickRotation = 60
 xtickFont = 4
 markerStyle = '.'
