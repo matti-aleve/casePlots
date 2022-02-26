@@ -36,6 +36,7 @@ The grey dots are the actual case counts, the blue line is the trailing 7 day av
 ![Image0](/pos.png)
 ![Image1](/tests.png)
 
+![Image2](https://covid19-sciencetable.ca/wp-content/uploads/2022/02/2022-02-26-COVID-19-Wastewater-Signals-in-Ontario-South-West-GTA.png)
 <!--
 ![Image1](/PHU/Ontario_Chart1.png)
 ![Image2](/PHU/Ontario_Chart2.png)
