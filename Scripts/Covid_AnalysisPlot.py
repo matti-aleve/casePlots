@@ -87,13 +87,15 @@ def chartingData (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart
 
 def chartingDataMax (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart):
 	maxCount = 0.0
-	maxDateStr = "2021-02-01"
+	maxDateStr = "2022-02-24"
 
 	for i in sorted(provincialCount):
 		if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(maxDateStr,'%Y-%m-%d')):
 			dailyCount = float(DayCountPHU(regionCountMain,healthUnit , i)/(PHU_Pop[healthUnit]/100000))
 			if dailyCount > maxCount :
 				maxCount = dailyCount
+				outString = "New Max = " + str(maxCount)
+				print (outString)
 	return maxCount
 
 
@@ -433,7 +435,7 @@ ytickSize = 6
 yTickColor = 'black'
 
 plotDays = -42
-plotDays = -7
+plotDays = -21
 xtickRotation = 60
 xtickFont = 4
 markerStyle = '.'
@@ -447,6 +449,7 @@ for i in sorted(provincialCount):
 
 print(lastdate)	
 	
+yLimMax = 0
 for hu in PHU_PositionC1:
 
 	healthUnit = hu
@@ -489,6 +492,15 @@ try:
 except:
 	print ("File Not copied to onedrive")
 
+yLimMax = 0
+for hu in PHU_PositionC2:
+
+	healthUnit = hu
+
+	maxValue = chartingDataMax(healthUnit,refDateStr,provincialCount,regionCountMain,theChart)
+	if maxValue > yLimMax:
+		yLimMax = maxValue
+
 
 for hu in PHU_PositionC2:
 
@@ -522,6 +534,17 @@ try:
 	shutil.copy2(dailyChartFile, webChartFile2)
 except:
 	print("File not copied to onedrive")
+
+
+
+yLimMax = 0
+for hu in PHU_PositionC3:
+
+	healthUnit = hu
+
+	maxValue = chartingDataMax(healthUnit,refDateStr,provincialCount,regionCountMain,theChart)
+	if maxValue > yLimMax:
+		yLimMax = maxValue
 
 
 for hu in PHU_PositionC3:

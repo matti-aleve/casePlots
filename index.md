@@ -36,10 +36,8 @@ The grey dots are the actual case counts, the blue line is the trailing 7 day av
 ![Image0](/pos.png)
 ![Image1](/tests.png)
 
-
-<!--
+**Testing criteria has not changed since early January.  Three week case trends may be of value
 ![Image1](/PHU/Ontario_Chart1.png)
 ![Image2](/PHU/Ontario_Chart2.png)
 ![Image3](/PHU/Ontario_Chart3.png)
 
--->
