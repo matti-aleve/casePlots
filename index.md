@@ -5,6 +5,8 @@ Best Data Sources:
 
 Checkout the wastewater signal on the Peel epi report.  See page 2 of the PDF.  Report is updated weekly on Friday afternoon.
 
+![Imageww](/Peel Wastewater.png)
+
 
 Charts on this site are generated automatically from various Covid data sets from the Ontario Data Catalog.
 Links to the datasets are provided below.
