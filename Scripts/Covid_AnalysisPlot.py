@@ -748,8 +748,8 @@ filename = "/Users/matti/Desktop/Covid/covidtesting_"+strToday+".csv"
 
 
 reported_date = 0
-pctPos = 10
-tests = 9
+pctPos = 11
+tests = 10
 
 
 	
