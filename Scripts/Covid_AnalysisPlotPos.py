@@ -313,7 +313,7 @@ print (regionCountMain["Peel Regional Health Unit"])
 
 for PHU in regionCountMain:
 	print (PHU)
-
+	lastDate = ""
 	## PctPos
 
 	chartPoint = []
@@ -323,6 +323,7 @@ for PHU in regionCountMain:
 		if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
 			chartX.append(i[-5:])
 			chartPoint.append(float(regionCountMain[PHU][i])*100)
+			lastDate = i
 			#chartX.append(i)
 		
 
@@ -341,7 +342,7 @@ for PHU in regionCountMain:
 	#plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.')
 
 	plt.plot(chartX,chartPoint,'r.')
-	plt.title(PHU + '-' + strToday)
+	plt.title(PHU + '-' + lastDate)
 
 	plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=60)
 	plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=14))
