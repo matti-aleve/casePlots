@@ -43,6 +43,12 @@ The grey dots are the actual case counts, the blue line is the trailing 7 day av
 ![Image0](/pos.png)
 ![Image1](/tests.png)
 
+** Health Unit Positivity
+
+![Image2]('/Pos/Peel Regional Health Unit.png')
+![Image3](/Pos/Peel Regional Health Unit.png)
+
+
 <!--
 
 **Testing criteria has not changed since early January.  Three week case trends may be of value
