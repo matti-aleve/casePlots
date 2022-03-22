@@ -40,45 +40,7 @@ def incrementPHUCount (regionCountMain,PHU,date,pct):
 	return regionCountMain
 
 
-	if PHU in regionCountMain:
-		if len(date) >= 0:
-			if date in regionCountMain[PHU]:
-				regionCountMain[PHU][date] = pct
-			else:
-				regionCountMain[PHU][date] = pct
-	else:
-		regionCountMain[PHU] = {}
-		regionCountMain[PHU][date] = pct
 	
-	return regionCountMain
-	
-def DayCountPHU (regionCountMain, PHU, date):
-	dayCount = 0
-	
-	return regionCountMain[PHU][date]
-
-def DayCountPHUAge (regionCountMain, PHU, date, age):
-	dayCount = 0
-	
-	for i,j in regionCountMain.items():
-		if i == PHU:
-			for k,l in j.items():
-				if k == date:
-					for m,n in l.items():
-						if(m==age):
-							dayCount = dayCount + n
-	return dayCount
-
-
-def decrementPHUCount (regionCount,date):
-
-	if len(date) >= 0:
-		if date in regionCount:
-			regionCount[date] = regionCount[date] - 1
-		else:
-			regionCount[date] = 0
-	
-	return regionCount
 	
 def chartingData (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart):
 
@@ -103,12 +65,6 @@ def chartingDataMax (HealthUnit,refDateStr,provincialCount,regionCountMain,theCh
 
 
 
-def chartingDataAge (HealthUnit,refDateStr,provincialCount,regionCountMain,theChart,Age):
-
-	for i in sorted(provincialCount):
-		if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
-			theChart.append(float(DayCountPHUAge(regionCountMain,healthUnit , i,Age)))
-	return theChart
 
 
 def xfmt(x,pos=None):
@@ -118,25 +74,6 @@ def xfmt(x,pos=None):
     label = label.lstrip('0')
     return label
 
-def mySubPlot (plotChart,plotPos,plotTitle,yLimMax,yTickColor):
-
-	num_series = pd.Series(plotChart)
-	windows = num_series.rolling(rollingAvg)
-	mov_avg = windows.mean()
-	mov_avg_list = mov_avg.tolist()
-
-	plt.subplot(spRow,spCol,plotPos)
-	plt.title(plotTitle)
-	plt.xticks(rotation=xtickRotation,fontsize=xtickFont)
-	plt.yticks(fontsize=ytickSize,color=yTickColor)
-	plt.plot(chartX[(plotDays-1):-1],plotChart[(plotDays-1):-1],color=markerColor,marker=markerStyle,linestyle='')
-	plt.plot(chartX[(plotDays-1):-1],mov_avg_list[(plotDays-1):-1])
-	plt.ylim(yLimMin,yLimMax)
-
-	plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=xtickRotation)
-	plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=xtickInterval))
-	plt.gca().xaxis.set_minor_locator(mdates.DayLocator())
-	return
 	
 	
 
@@ -184,10 +121,6 @@ provincialCount = {}
 
 
 
-MAIN = {"Peel Public Health","Toronto Public Health","York Region Public Health Services",
-"Hamilton Public Health Services","Niagara Region Public Health Department","Halton Region Health Department",
-"Region of Waterloo, Public Health","Windsor-Essex County Health Unit","Ottawa Public Health","Durham Region Health Department"}
-
 
 
 PHU_Short_Name = {"Peel Public Health":"Peel","Toronto Public Health":"Toronto",
@@ -209,53 +142,6 @@ PHU_Short_Name = {"Peel Public Health":"Peel","Toronto Public Health":"Toronto",
 "Algoma Public Health Unit":"Algoma","Sudbury & District Health Unit":"Sudbury","Porcupine Health Unit":"Porcupine"}
 
 
-PHU_Scale = {"Peel Public Health":1,"Toronto Public Health":1,
-"York Region Public Health Services":1,"Hamilton Public Health Services":1,
-"Niagara Region Public Health Department":1,
-"Halton Region Health Department":1,"Region of Waterloo, Public Health":1,
-"Windsor-Essex County Health Unit":1,"Ottawa Public Health":1,
-"Durham Region Health Department":1,"Brant County Health Unit":1,
-"Lambton Public Health":1,"Chatham-Kent Health Unit":1,
-"Huron Perth District Health Unit":1,"Southwestern Public Health":1,
-"Middlesex-London Health Unit":1,"Wellington-Dufferin-Guelph Public Health":1,
-"Eastern Ontario Health Unit":1,"Haldimand-Norfolk Health Unit":1,
-"Simcoe Muskoka District Health Unit":1,"Peterborough Public Health":1,
-"Timiskaming Health Unit":1,"Haliburton, Kawartha, Pine Ridge District Health Unit":1,
-"Leeds, Grenville and Lanark District Health Unit":1,"Grey Bruce Health Unit":1,
-"Renfrew County and District Health Unit":1,"Hastings and Prince Edward Counties Health Unit":1,
-"Thunder Bay District Health Unit":1,"Kingston, Frontenac and Lennox & Addington Public Health":1,
-"Northwestern Health Unit":1,"North Bay Parry Sound District Health Unit":1,
-"Algoma Public Health Unit":1,"Sudbury & District Health Unit":1,"Porcupine Health Unit":1}
-
-
-PHU_PositionC1 = {"Peel Public Health":1,"Toronto Public Health":2,
-"York Region Public Health Services":5,"Hamilton Public Health Services":3,
-"Niagara Region Public Health Department":6,
-"Halton Region Health Department":4,"Region of Waterloo, Public Health":10,
-"Windsor-Essex County Health Unit":15,"Ottawa Public Health":11,
-"Brant County Health Unit":7,"Huron Perth District Health Unit":13,
-"Middlesex-London Health Unit":14,"Wellington-Dufferin-Guelph Public Health":8,
-"Grey Bruce Health Unit":12,"Durham Region Health Department":9
-}
-
-PHU_PositionC2 = {
-"Lambton Public Health":1,"Chatham-Kent Health Unit":2,
-"Southwestern Public Health":3,
-"Eastern Ontario Health Unit":4,"Haldimand-Norfolk Health Unit":5,
-"Simcoe Muskoka District Health Unit":9,"Peterborough Public Health":7,
-"Timiskaming Health Unit":10,"Haliburton, Kawartha, Pine Ridge District Health Unit":11,
-"Leeds, Grenville and Lanark District Health Unit":8,
-"Renfrew County and District Health Unit":6,"Hastings and Prince Edward Counties Health Unit":12,
-"Kingston, Frontenac and Lennox & Addington Public Health":13,
-"Northwestern Health Unit":14,"North Bay Parry Sound District Health Unit":15,
-}
-
-PHU_PositionC3 = {"Algoma Public Health Unit":1,
-"Sudbury & District Health Unit":2,"Porcupine Health Unit":3,
-"Thunder Bay District Health Unit":4}
-
-
-under40 = {"<20","20s","30s"}
 	
 	
 start_date = "20" + start_date
