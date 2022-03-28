@@ -52,9 +52,10 @@ The grey dots are the actual case counts, the blue line is the trailing 7 day av
 ![Image3](/Pos/City of Toronto Health Unit.png)
 
 
-<!--
 
 **Testing criteria has not changed since early January.  Three week case trends may be of value
+
+Even with highly restricted testing, cases going up.
 
 The following charts show case counts by case reported date per 100k by PHU for Ontario.  
 The grey dots are the actual case counts, the blue line is the trailing 7 day average.
@@ -70,4 +71,3 @@ Data from:
 
 * [https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario ](https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario) 
 
--->
