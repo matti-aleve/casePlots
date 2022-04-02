@@ -277,7 +277,7 @@ PHU_Short_Name = {"Peel Public Health":"Peel","Toronto Public Health":"Toronto",
 "Leeds, Grenville and Lanark District Health Unit":"Leeds","Grey Bruce Health Unit":"Grey Bruce",
 "Renfrew County and District Health Unit":"Renfrew","Hastings and Prince Edward Counties Health Unit":"Hastings",
 "Thunder Bay District Health Unit":"Thunder Bay","Kingston, Frontenac and Lennox & Addington Public Health":"Kingston",
-"Northwestern Health Unit":"Northwastern","North Bay Parry Sound District Health Unit":"North Bay",
+"Northwestern Health Unit":"Northwestern","North Bay Parry Sound District Health Unit":"North Bay",
 "Algoma Public Health Unit":"Algoma","Sudbury & District Health Unit":"Sudbury","Porcupine Health Unit":"Porcupine"}
 
 
@@ -319,12 +319,12 @@ PHU_PositionC2 = {
 "Leeds, Grenville and Lanark District Health Unit":8,
 "Renfrew County and District Health Unit":6,"Hastings and Prince Edward Counties Health Unit":12,
 "Kingston, Frontenac and Lennox & Addington Public Health":13,
-"Northwestern Health Unit":14,"North Bay Parry Sound District Health Unit":15,
+"Thunder Bay District Health Unit":14,"North Bay Parry Sound District Health Unit":15,
 }
 
 PHU_PositionC3 = {"Algoma Public Health Unit":1,
 "Sudbury & District Health Unit":2,"Porcupine Health Unit":3,
-"Thunder Bay District Health Unit":4}
+"Northwestern Health Unit":4}
 
 
 under40 = {"<20","20s","30s"}
