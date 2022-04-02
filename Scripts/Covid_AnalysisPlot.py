@@ -807,6 +807,7 @@ daysToPlot = -15
 
 #plt.plot(chartX[daysToPlot:],chartPoint[daysToPlot:],'r.')
 plt.plot(chartX,chartPoint,'r.')
+plt.plot(chartX,mov_avg_list)
 plt.title('Percent Positivity -' + strToday)
 
 plt.setp(plt.gca().xaxis.get_majorticklabels(),rotation=60)
