@@ -205,7 +205,7 @@ for PHU in regionCountMain:
 	chartPoint = []
 	chartX = []
 	for i in sorted(regionCountMain[PHU]):
-		refDateStr = "2021-04-01"
+		refDateStr = "2021-06-01"
 		if(datetime.strptime(i,'%Y-%m-%d') > datetime.strptime(refDateStr,'%Y-%m-%d')):
 			chartX.append(i[-5:])
 			chartPoint.append(float(regionCountMain[PHU][i])*100)
