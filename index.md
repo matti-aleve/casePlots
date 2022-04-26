@@ -7,7 +7,7 @@ Best Data Sources:
 Checkout the wastewater signal on the Peel epi report.  See page 2 of the PDF.  Report is updated weekly on Friday afternoon.
 
 ![Imageww](/Peel_Wastewater.png)
-
+ 
 Science Table Hospitalization Chart - 2022-04-26
 ![ScienceTable](https://covid19-sciencetable.ca/wp-content/uploads/2022/04/2022-04-26-Daily-COVID-19-Hospitalizations-and-ICU-Occupancy-in-Ontario.png)
 
