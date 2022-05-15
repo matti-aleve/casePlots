@@ -56,6 +56,7 @@ The grey dots are the actual case counts, the blue line is the trailing 7 day av
 ![Image3](/Pos/City of Hamilton Health Unit.png)
 ![Image3](/Pos/City of Toronto Health Unit.png)
 
+<!--
 
 
 **Testing criteria has not changed since early January.  Three week case trends may be of value
@@ -76,3 +77,4 @@ Data from:
 
 * [https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario ](https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario) 
 
+-->
