@@ -8,11 +8,11 @@ Checkout the wastewater signal on the Peel epi report.  See page 2 of the PDF.  
 
 ![Imageww](/Peel_Wastewater.png)
  
-Science Table Hospitalization Chart - 2022-05-15
-![ScienceTable](https://covid19-sciencetable.ca/wp-content/uploads/2022/05/2022-05-15-Daily-COVID-19-Hospitalizations-and-ICU-Occupancy-in-Ontario.png)
+Science Table Hospitalization Chart - 2022-05-20
+![ScienceTable](https://covid19-sciencetable.ca/wp-content/uploads/2022/05/2022-05-20-Daily-COVID-19-Hospitalizations-and-ICU-Occupancy-in-Ontario.png)
 
 Wastewater
-![ScienceTableWW](https://covid19-sciencetable.ca/wp-content/uploads/2022/05/2022-05-15-Province-Wide-COVID-19-Wastewater-Signal-in-Ontario.png)
+![ScienceTableWW](https://covid19-sciencetable.ca/wp-content/uploads/2022/05/2022-05-20-Province-Wide-COVID-19-Wastewater-Signal-in-Ontario.png)
 
 Charts on this site are generated automatically from various Covid data sets from the Ontario Data Catalog.
 Links to the datasets are provided below.
