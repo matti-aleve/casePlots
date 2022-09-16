@@ -3,6 +3,7 @@ Best Data Sources:
 * [OHA Data](https://www.oha.com/news/covid-19-hospital-capacity-update)
 * [Peel Epi Data](https://www.peelregion.ca/coronavirus/case-status/)
 * [The Star Wastewater Data](https://www.thestar.com/news/gta/2022/03/22/is-covid-surging-or-declining-in-the-gta-use-our-map-to-see-wastewater-trends-for-your-area.html)
+* [PHO Wastewater Data](https://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/COVID-19-Data-Surveillance/Wastewater)
 
 Checkout the wastewater signal on the Peel epi report.  See page 2 of the PDF.  Report is updated weekly on Friday afternoon.
 
