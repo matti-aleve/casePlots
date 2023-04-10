@@ -8,6 +8,7 @@ import os
 import time
 import shutil
 import csv
+from mastodon import Mastodon
 
 from datetime import datetime as dt
 
@@ -36,7 +37,7 @@ os.system("curl " + baseURL + greaterToronto + ".png > " + baseOutput + greaterT
 os.system("curl " + baseURL + southWest + ".png > " + baseOutput + southWest + ".png")
 os.system("curl " + baseURL + centralWest + ".png > " + baseOutput + centralWest + ".png")
 
-baseOutput = "~/Desktop/CovidWW/WW"
+baseOutput = "~/Desktop/CovidWW/"
 
 os.system("curl " + baseURL + ontario + ".png > " + baseOutput + ontario +"-"+ strToday + ".png")
 os.system("curl " + baseURL + northWest + ".png > " + baseOutput + northWest +"-"+ strToday + ".png")
@@ -46,3 +47,22 @@ os.system("curl " + baseURL + centralEast + ".png > " + baseOutput + centralEast
 os.system("curl " + baseURL + greaterToronto + ".png > " + baseOutput + greaterToronto +"-"+ strToday + ".png")
 os.system("curl " + baseURL + southWest + ".png > " + baseOutput + southWest +"-"+ strToday + ".png")
 os.system("curl " + baseURL + centralWest + ".png > " + baseOutput + centralWest +"-"+ strToday + ".png")
+
+
+f = open("/Users/matti/Keys/tokensBotInSpaceGTA.secret", "r")
+sToken = f.readline()
+print(sToken)
+
+#   Set up Mastodon
+mastodon = Mastodon(
+    access_token = sToken,
+    api_base_url = 'https://botsin.space/'
+)
+
+pngFile = "/Users/matti/Desktop/CovidWW/" + greaterToronto + "-" + strToday + ".png"
+postText = "Automated Post \rGreater Toronto Toronto Waste Water for  " + strToday
+postText = postTest + "/r/rhttps://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/COVID-19-Data-Surveillance/Wastewater"
+print(pngFile)
+#mastodon.toot("Test Post via API...")
+metadata = mastodon.media_post(pngFile, "image/png")
+mastodon.status_post(postText, media_ids=metadata["id"])
