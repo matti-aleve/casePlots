@@ -50,6 +50,8 @@ if "Matti-MacBook-Pro.local" not in hostInfo:
 	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/7e644a48-6040-4ee0-9216-1f88121b21ba/download/schoolcovidsummary2021_2022.csv > ~/Desktop/Covid/schoolcovidsummary2021_2022_"+strToday+".csv")
 	os.system("curl https://data.ontario.ca/dataset/b1fef838-8784-4338-8ef9-ae7cfd405b41/resource/dc5c8788-792f-4f91-a400-036cdf28cfe8/download/schoolrecentcovid2021_2022.csv > ~/Desktop/Covid/schoolsactivecovid2021_2022_"+strToday+".csv")
 
+sys.exit()
+
 fd=open(filename21,'r')
 today=fd.readlines() # Read entire contents of file
 fd.close()

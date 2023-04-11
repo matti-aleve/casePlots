@@ -77,6 +77,7 @@ def xfmt(x,pos=None):
 	
 	
 
+sys.exit()
 
 webChartFile = '/Users/matti/GitHub/casePlots/PHU/Ontario_ChartPos1.png'
 webChartFile2 = '/Users/matti/GitHub/casePlots/PHU/Ontario_ChartPos2.png'

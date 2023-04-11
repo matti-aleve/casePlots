@@ -51,6 +51,7 @@ hostInfo = os.uname()
 if "Matti-MacBook-Pro.local" not in hostInfo:
 	os.system("curl https://data.ontario.ca/dataset/5bf54477-6147-413f-bab0-312f06fcb388/resource/74f9ac9f-7ca8-4860-b2c3-189a2c25e30c/download/lcccovidsummary.csv > ~/Desktop/Covid/lcccovidsummary_" + strToday + ".csv")
 
+sys.exit()
 
 fd=open(filename,'r')
 today=fd.readlines() # Read entire contents of file

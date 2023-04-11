@@ -33,6 +33,8 @@ def xfmt(x,pos=None):
     label = label.lstrip('0')
     return label
 
+sys.exit()
+
 phus = "All"
 filename = ""
 

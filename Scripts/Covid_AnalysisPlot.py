@@ -200,6 +200,8 @@ if "Matti-MacBook-Pro.local" not in hostInfo:
 	#outbreaks by PHU
 	os.system("curl https://data.ontario.ca/dataset/5472ffc1-88e2-48ca-bc9f-4aa249c1298d/resource/36048cc1-3c47-48ff-a49f-8c7840e32cc2/download/ongoing_outbreaks_phu.csv > ~/Desktop/Covid/ongoing_outbreaks_phu_"+strToday+".csv")
 
+sys.exit()
+
 fd=open(filename,'r')
 today=fd.readlines() # Read entire contents of file
 fd.close()
