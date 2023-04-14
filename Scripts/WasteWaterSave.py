@@ -61,7 +61,7 @@ mastodon = Mastodon(
 
 pngFile = "/Users/matti/Desktop/CovidWW/" + greaterToronto + "-" + strToday + ".png"
 postText = "Automated Post \rGreater Toronto Toronto Waste Water for  " + strToday
-postText = postTest + "/r/rhttps://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/COVID-19-Data-Surveillance/Wastewater"
+postText = postText + "\r\rhttps://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/COVID-19-Data-Surveillance/Wastewater"
 print(pngFile)
 #mastodon.toot("Test Post via API...")
 metadata = mastodon.media_post(pngFile, "image/png")
